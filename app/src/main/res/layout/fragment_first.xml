@@ -9,46 +9,73 @@
         android:id="@+id/previous_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginVertical="@dimen/S"
+        android:gravity="center"
         android:textAlignment="center"
         android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/minValue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="Previous result: 4" />
 
-    <EditText
-        android:id="@+id/min_value"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/minValue"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:hint="Min"
-        android:inputType="number"
-        android:textSize="20sp"
+        android:layout_marginVertical="@dimen/S"
+        android:hint="@string/hint_min_value"
+        app:layout_constraintBottom_toTopOf="@+id/maxValue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/previous_result" />
+        app:layout_constraintTop_toBottomOf="@+id/previous_result">
 
-    <EditText
-        android:id="@+id/max_value"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/maxValue"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="Max"
-        android:inputType="number"
-        android:textSize="20sp"
+        android:layout_marginVertical="@dimen/S"
+        android:hint="@string/hint_max_value"
+        app:layout_constraintBottom_toTopOf="@+id/generateButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/min_value" />
+        app:layout_constraintTop_toBottomOf="@+id/minValue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/generate"
-        android:layout_width="200dp"
+        android:id="@+id/generateButton"
+        style="@style/CommonButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Generate"
+        android:layout_marginVertical="@dimen/XXL"
+        android:paddingHorizontal="@dimen/XXL"
+        android:text="@string/generate_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/max_value" />
+        app:layout_constraintTop_toBottomOf="@+id/maxValue" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

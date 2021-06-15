@@ -6,4 +6,11 @@
     <string name="previous_result_text">Previous result: %d</string>
     <string name="result_text">Result:</string>
     <string name="back_btn">Back</string>
+
+<!--    Errors-->
+    <string name="error_min_null">Min cannot be null</string>
+    <string name="error_max_null">Max cannot be null</string>
+    <string name="error_min_more_max">Min value is more than max</string>
+    <string name="error_min_more_int">Min value is more than max int value</string>
+    <string name="error_max_more_int">Max value is more than max int value</string>
 </resources>
