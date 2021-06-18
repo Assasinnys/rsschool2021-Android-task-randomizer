@@ -9,35 +9,42 @@
         android:id="@+id/result_label"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Result:"
-        android:textAlignment="center"
+        android:layout_marginVertical="@dimen/S"
+        android:gravity="center"
+        android:text="@string/result_text"
         android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/S"
         android:layout_marginTop="50dp"
-        android:text="Result:"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textSize="66sp"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result_label"
+        app:layout_constraintTop_toBottomOf="@+id/result_label"
         tools:text="0" />
 
     <Button
-        android:id="@+id/back"
-        android:layout_width="100dp"
+        android:id="@+id/backButton"
+        style="@style/CommonButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Back"
+        android:text="@string/back_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result" />
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
