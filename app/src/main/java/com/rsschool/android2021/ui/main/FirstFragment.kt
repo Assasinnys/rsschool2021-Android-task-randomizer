@@ -75,7 +75,7 @@ class FirstFragment : BaseFragment() {
                 false
             }
             min > Int.MAX_VALUE -> {
-                binding.minValue.callError(R.string.error_min_more_max)
+                binding.minValue.callError(R.string.error_min_more_int)
                 false
             }
             max > Int.MAX_VALUE -> {
